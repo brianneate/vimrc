@@ -61,3 +61,6 @@ noremap <leader>0 :exe "tabn ".g:lasttab<cr>
 let g:ctrlp_working_path_mode = 'rc'
 noremap <leader>p :CtrlP<CR>
 noremap <leader>o :CtrlPTag<CR>
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
