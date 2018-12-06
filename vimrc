@@ -3,6 +3,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 set nofoldenable
+set hlsearch
 
 " Indentation
 set shiftwidth=2
@@ -39,6 +40,12 @@ set conceallevel=0
 " System Clipboard
 vnoremap <C-c> "+y
 noremap <C-v> "+p
+
+" Grep Shortcuts
+noremap <leader>gw :grep -R <C-r><C-w> *<CR><CR> :copen<CR>
+
+" Clear Search
+noremap // :noh<CR>
 
 " Terminal Mouse Scroll
 function! ExitNormalMode()
