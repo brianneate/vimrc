@@ -25,7 +25,10 @@ set guioptions-=l
 set guioptions-=L
 set guioptions-=e
 
-" Disable Background Color Erase (Fix term background redraw)
+" Enable terminal mouse mode
+set mouse=a
+
+" Disable background color erase (fix term background redraw)
 set t_ut=
 
 " Open file in browser with highlighting
@@ -37,17 +40,17 @@ let $BASH_ENV = "~/.bashrc"
 " Don't hide " chars in json files
 set conceallevel=0
 
-" System Clipboard
+" System clipboard
 vnoremap <C-c> "+y
 noremap <C-v> "+p
 
-" Grep Shortcuts
-noremap <leader>gw :grep -R <C-r><C-w> *<CR><CR> :copen<CR>
+" Grep shortcuts
+noremap <leader>gw :grep --exclude tags --exclude-dir build -r <C-r><C-w> *<CR><CR> :copen<CR>
 
-" Clear Search
+" Clear search
 noremap // :noh<CR>
 
-" Terminal Mouse Scroll
+" Terminal mouse scroll
 function! ExitNormalMode()
     unmap <buffer> <silent> <RightMouse>
     call feedkeys("a")
@@ -60,7 +63,6 @@ function! EnterNormalMode()
         map <buffer> <silent> <RightMouse> :call ExitNormalMode()<CR>
     endif
 endfunction
-
 tmap <silent> <ScrollWheelUp> <c-w>:call EnterNormalMode()<CR>
 
 " Tabs
