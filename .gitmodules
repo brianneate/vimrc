@@ -31,3 +31,6 @@
 [submodule "bundle/vim-illuminate"]
 	path = bundle/vim-illuminate
 	url = https://github.com/RRethy/vim-illuminate.git
+[submodule "bundle/vim-ripgrep"]
+	path = bundle/vim-ripgrep
+	url = https://github.com/jremmen/vim-ripgrep

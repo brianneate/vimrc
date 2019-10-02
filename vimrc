@@ -11,6 +11,9 @@ set tabstop=2
 set softtabstop=2
 set expandtab
 
+" Fold method
+set foldmethod=indent
+
 " Theme
 set background=dark
 let g:gruvbox_italic=1
@@ -45,7 +48,7 @@ vnoremap <C-c> "+y
 noremap <C-v> "+p
 
 " Grep shortcuts
-noremap <leader>gw :grep --exclude tags --exclude-dir build -r <C-r><C-w> *<CR><CR> :copen<CR>
+noremap <leader>fw :Rg <C-r><C-w><CR>
 
 " Clear search
 noremap // :noh<CR>
@@ -69,8 +72,17 @@ noremap <leader>0 :exe "tabn ".g:lasttab<cr>
 
 " CTRLP
 let g:ctrlp_working_path_mode = 'rc'
+if executable('rg')
+  let g:ctrlp_user_command = 'rg %s --files --hidden --color=never --glob ""'
+endif
 noremap <leader>p :CtrlP<CR>
 noremap <leader>o :CtrlPTag<CR>
 
 " NERDTree
-map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeWinSize=50
+noremap <leader>n :NERDTreeToggle<CR>
+noremap <leader>N :NERDTreeFind<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Illuminate word highlighter
+let g:Illuminate_delay = 0
