@@ -7,12 +7,6 @@
 [submodule "bundle/gruvbox"]
 	path = bundle/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
-[submodule "bundle/vim-airline"]
-	path = bundle/vim-airline
-	url = https://github.com/vim-airline/vim-airline
-[submodule "bundle/vim-airline-cwd"]
-	path = bundle/vim-airline-cwd
-	url = https://github.com/ompugao/vim-airline-cwd.git
 [submodule "bundle/vim-commentary"]
 	path = bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary
