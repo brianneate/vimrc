@@ -49,6 +49,7 @@ noremap <C-v> "+p
 
 " Grep shortcuts
 noremap <leader>fw :Rg <C-r><C-w><CR>
+vnoremap <leader>fs y :Rg <C-r>"<CR>
 
 " Clear search
 noremap // :noh<CR>
