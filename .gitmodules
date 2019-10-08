@@ -28,3 +28,6 @@
 [submodule "bundle/vim-ripgrep"]
 	path = bundle/vim-ripgrep
 	url = https://github.com/jremmen/vim-ripgrep
+[submodule "bundle/quickfix-reflector.vim"]
+	path = bundle/quickfix-reflector.vim
+	url = https://github.com/stefandtw/quickfix-reflector.vim.git
