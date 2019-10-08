@@ -87,3 +87,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " Illuminate word highlighter
 let g:Illuminate_delay = 0
+
+" Auto complete
+let g:mucomplete#enable_auto_at_startup = 1
+set completeopt-=preview
+set completeopt+=menuone
+set completeopt+=noselect
