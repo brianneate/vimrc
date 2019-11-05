@@ -1,5 +1,19 @@
+call plug#begin()
+  Plug 'rust-lang/rust.vim'
+  Plug 'https://github.com/corntrace/bufexplorer'
+  Plug 'https://github.com/kien/ctrlp.vim'
+  Plug 'https://github.com/morhetz/gruvbox.git'
+  Plug 'https://github.com/tpope/vim-commentary'
+  "Plug 'https://github.com/ludovicchabant/vim-gutentags.git'
+  Plug 'https://github.com/tpope/vim-sensible.git'
+  Plug 'https://github.com/scrooloose/nerdtree.git'
+  Plug 'https://github.com/RRethy/vim-illuminate.git'
+  Plug 'https://github.com/jremmen/vim-ripgrep'
+  Plug 'https://github.com/stefandtw/quickfix-reflector.vim.git'
+  Plug 'https://github.com/lifepillar/vim-mucomplete.git'
+call plug#end()
+
 set nocompatible
-execute pathogen#infect()
 syntax on
 filetype plugin indent on
 set nofoldenable
@@ -80,7 +94,6 @@ noremap <leader>p :CtrlP<CR>
 noremap <leader>o :CtrlPTag<CR>
 
 " NERDTree
-let g:NERDTreeWinSize=50
 noremap <leader>n :NERDTreeToggle<CR>
 noremap <leader>N :NERDTreeFind<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
