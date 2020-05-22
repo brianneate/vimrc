@@ -19,11 +19,24 @@ filetype plugin indent on
 set nofoldenable
 set hlsearch
 
+" Temporary file paths
+set dir=~/.vim/swapfiles//
+set backup
+set backupdir=~/.vim/backupfiles//
+set undofile
+set undodir=~/.vim/undofiles//
+
+" Leader
+let mapleader = " "
+
 " Indentation
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set expandtab
+
+" Line numbering
+set relativenumber
 
 " Fold method
 set foldmethod=indent
@@ -32,6 +45,7 @@ set foldmethod=indent
 set background=dark
 let g:gruvbox_italic=1
 colorscheme gruvbox
+hi SpellBad cterm=underline,bold ctermfg=red
 
 " GVIM remove gui stuff
 set guioptions-=m
@@ -62,7 +76,7 @@ vnoremap <C-c> "+y
 noremap <C-v> "+p
 
 " Grep shortcuts
-noremap <leader>fw :Rg <C-r><C-w><CR>
+noremap <leader>fw :Rg -w <C-r><C-w><CR>
 vnoremap <leader>fs y :Rg <C-r>"<CR>
 
 " Clear search
@@ -103,6 +117,9 @@ let g:Illuminate_delay = 0
 
 " Auto complete
 let g:mucomplete#enable_auto_at_startup = 1
+let g:mucomplete#chains = { 'default' : ['c-n'] }
+call add(g:mucomplete#chains.default, 'tags')
+
 set completeopt-=preview
 set completeopt+=menuone
 set completeopt+=noselect
