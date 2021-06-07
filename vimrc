@@ -11,6 +11,7 @@ call plug#begin()
   Plug 'https://github.com/jremmen/vim-ripgrep'
   Plug 'https://github.com/stefandtw/quickfix-reflector.vim.git'
   Plug 'https://github.com/lifepillar/vim-mucomplete.git'
+  Plug 'https://tpope.io/vim/unimpaired.git'
 call plug#end()
 
 set nocompatible
@@ -35,9 +36,6 @@ set tabstop=2
 set softtabstop=2
 set expandtab
 
-" Line numbering
-set relativenumber
-
 " Fold method
 set foldmethod=indent
 
@@ -57,7 +55,7 @@ set guioptions-=L
 set guioptions-=e
 
 " Enable terminal mouse mode
-set mouse=a
+set mouse=i
 
 " Disable background color erase (fix term background redraw)
 set t_ut=
@@ -72,8 +70,7 @@ let $BASH_ENV = "~/.bashrc"
 set conceallevel=0
 
 " System clipboard
-vnoremap <C-c> "+y
-noremap <C-v> "+p
+set clipboard=unnamedplus
 
 " Grep shortcuts
 noremap <leader>fw :Rg -w <C-r><C-w><CR>
