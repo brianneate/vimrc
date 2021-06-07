@@ -1,5 +1,4 @@
 call plug#begin()
-  Plug 'rust-lang/rust.vim'
   Plug 'https://github.com/corntrace/bufexplorer'
   Plug 'https://github.com/kien/ctrlp.vim'
   Plug 'https://github.com/morhetz/gruvbox.git'
